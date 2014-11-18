@@ -283,6 +283,9 @@ public class ACache {
 	 *            保存的时间，单位：秒
 	 */
 	public void put(String key, JSONArray value, int saveTime) {
+	    if ( value == null ) {
+	        return ;
+	    }
 		put(key, value.toString(), saveTime);
 	}
 
